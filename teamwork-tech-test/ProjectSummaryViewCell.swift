@@ -10,13 +10,11 @@ import Foundation
 import UIKit
 
 class ProjectSummaryViewCell: UITableViewCell {
-    // Should probably make this an Int
     var projectId: String = ""
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    
     
     override func prepareForReuse() {
         super.prepareForReuse()

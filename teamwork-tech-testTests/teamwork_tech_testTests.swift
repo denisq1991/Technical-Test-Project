@@ -16,21 +16,26 @@ class teamwork_tech_testTests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testProjectSummaryDictionary_WithValidData_shouldReturnValidProjectSummary() {
+        // make a project summary dict
+        
+        // decode it
+        
+        // validate the properties
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testProjectDetailsDictionary_WithValidData_shouldReturnValidProjectSummary() {
+        // make a project details dict
+        
+        // decode it
+        
+        // validate the properties
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testDateFormatter_WithISOString_shouldReturnFormattedString() {
+        // Give an ISO date string
+        
+        // Verify it is a formatted string
     }
     
 }

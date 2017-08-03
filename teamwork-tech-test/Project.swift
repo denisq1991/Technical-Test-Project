@@ -15,23 +15,22 @@ protocol Project {
     var status: String { get }
 }
 
-// To be displayed in a table on the homescreen
 struct ProjectSummary: Project {
     var id: String
     var name: String
     var description: String
-    var status: String // make an enum when I know the differences
+    var status: String
 }
 
-// To be presented by ID on the 2nd VC
 struct ProjectDetail: Project {
     var id: String
     var name: String
     var description: String
-    var status: String // make an enum when I know the differences
-    var subStatus: String // make an enum when I know the differences
-    var defaultPrivacy: String // make an enum when I know the differences
-    var createdOn: Date
-    var startDate: Date
+    var status: String
+    var subStatus: String
+    var defaultPrivacy: String
+    var createdOn: String
+    var startDate: String
+    var endDate: String
     var logoURL: String
 }

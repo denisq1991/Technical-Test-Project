@@ -8,28 +8,38 @@
 
 import UIKit
 
-final class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+final class ProjectSummaryViewController: UIViewController {
     
     @IBOutlet weak var projectsTableView: UITableView!
-    var projectManager: ProjectManager?
     var projectSummaries: [ProjectSummary] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Projects"
         self.configureTableView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let lastSelectedRow = self.projectsTableView.indexPathForSelectedRow {
+            self.projectsTableView.deselectRow(at: lastSelectedRow, animated: true)
+        }
     }
     
     private func configureTableView() {
         self.projectsTableView.register(UINib(nibName: "ProjectSummaryViewCell", bundle: nil), forCellReuseIdentifier: "ProjectSummaryCell")
         self.projectsTableView.tableFooterView = UIView()
-        self.projectManager = ProjectManager()
-        self.projectManager?.loadProjectSummaries(completion: { (summaries) in
+        sharedObjects.projectManager.loadProjectSummaries(completion: { (summaries) in
             self.projectSummaries = summaries
             self.projectsTableView.reloadData()
         })
     }
+}
 
-    //MARK: - Data Source
+//MARK: - Data Source
+extension ProjectSummaryViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.projectSummaries.count
@@ -39,32 +49,39 @@ final class ViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = self.projectsTableView.dequeueReusableCell(withIdentifier: "ProjectSummaryCell", for: indexPath) as?  ProjectSummaryViewCell else {
             print("No ProjectSummaryCell could be found at the current index path")
+            return UITableViewCell()
         }
         
         let project = self.projectSummaries[indexPath.row]
+        cell.projectId = project.id
         cell.nameLabel.text = project.name
-        cell.statusLabel.text = project.status
+        cell.statusLabel.text = project.status.uppercased()
         cell.descriptionLabel.text = project.description
         
         return cell
     }
-    
-    //MARK: - Delegate
-    
+}
+
+//MARK: - Delegate
+extension ProjectSummaryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // get the cell
-        let cell = self.projectsTableView.cellForRow(at: indexPath)
-        let project = self.projectSummaries[indexPath.row]
-        let projectId = project.id
         
-        // pass the id to the next view controller
-        let storyboard = UIStoryboard.init(name: "Main", bundle:nil)
-        let controller = storyboard?.instantiateViewController(withIdentifier: "ProjectDetails") as! WNProductListViewController
+        guard let cell = self.projectsTableView.cellForRow(at: indexPath) as? ProjectSummaryViewCell else {
+            print("Couldn't find ProjectSummaryViewCell at indexPath: " + String(describing: indexPath))
+            return
+        }
+        
+        let storyboard = UIStoryboard.init(name: "ProjectDetails", bundle:nil)
+        guard let controller = storyboard.instantiateViewController(withIdentifier: "ProjectDetails") as? ProjectDetailsViewController else {
+            print("Couldn't find ProjectDetails view controller")
+            return
+        }
+        controller.projectId = cell.projectId
+        self.navigationController?.pushViewController(controller, animated: true)
     }
-    
 }
 

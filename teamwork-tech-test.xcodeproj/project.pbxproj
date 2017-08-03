@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		D220509BFBAE862E2298D18A /* Pods_teamwork_tech_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33476573B22913F9676EB506 /* Pods_teamwork_tech_testTests.framework */; };
 		DF0272851F3119D600337C08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0272841F3119D600337C08 /* AppDelegate.swift */; };
-		DF0272871F3119D600337C08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0272861F3119D600337C08 /* ViewController.swift */; };
+		DF0272871F3119D600337C08 /* ProjectSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0272861F3119D600337C08 /* ProjectSummaryViewController.swift */; };
 		DF02728A1F3119D600337C08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF0272881F3119D600337C08 /* Main.storyboard */; };
 		DF02728C1F3119D600337C08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF02728B1F3119D600337C08 /* Assets.xcassets */; };
 		DF02728F1F3119D600337C08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF02728D1F3119D600337C08 /* LaunchScreen.storyboard */; };
@@ -17,15 +17,15 @@
 		DF0272AC1F32081C00337C08 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0272AB1F32081C00337C08 /* Project.swift */; };
 		DF0272AE1F320E5200337C08 /* Project+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0272AD1F320E5200337C08 /* Project+Decodable.swift */; };
 		DF0272B01F320E8C00337C08 /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0272AF1F320E8C00337C08 /* Decodable.framework */; };
-		DF0272B21F320E9200337C08 /* FLAnimatedImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0272B11F320E9200337C08 /* FLAnimatedImage.framework */; };
-		DF0272B41F320E9500337C08 /* PINCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0272B31F320E9500337C08 /* PINCache.framework */; };
-		DF0272B61F320E9A00337C08 /* PINRemoteImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0272B51F320E9A00337C08 /* PINRemoteImage.framework */; };
-		DF0272B81F3212A400337C08 /* ProjectDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0272B71F3212A300337C08 /* ProjectDataSource.swift */; };
+		DF0272B81F3212A400337C08 /* ProjectSummaryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0272B71F3212A300337C08 /* ProjectSummaryDataSource.swift */; };
 		DF0272C01F32159400337C08 /* ProjectSummaryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0272BF1F32159400337C08 /* ProjectSummaryViewCell.swift */; };
 		DF0272C91F323CED00337C08 /* ProjectSummaryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF0272C81F323CED00337C08 /* ProjectSummaryViewCell.xib */; };
 		DF6112D61F332CCE00BB0621 /* ProjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6112D51F332CCE00BB0621 /* ProjectManager.swift */; };
 		DF6112D91F33397900BB0621 /* ProjectDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6112D81F33397900BB0621 /* ProjectDetailsViewController.swift */; };
 		DF6112DB1F333FCD00BB0621 /* ProjectDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF6112DA1F333FCD00BB0621 /* ProjectDetails.storyboard */; };
+		DF6112DD1F33590A00BB0621 /* ProjectDetailsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6112DC1F33590A00BB0621 /* ProjectDetailsDataSource.swift */; };
+		DF6112E01F33690800BB0621 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6112DF1F33690800BB0621 /* Date+String.swift */; };
+		DF6112E41F336A1700BB0621 /* LoadingSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6112E31F336A1700BB0621 /* LoadingSpinner.swift */; };
 		FB1B314A24E4D77D8D0A819A /* Pods_teamwork_tech_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC043B0279BB2BE378CDD1F /* Pods_teamwork_tech_test.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +47,7 @@
 		743E357C8B02CD0255F96A8A /* Pods-teamwork-tech-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teamwork-tech-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-teamwork-tech-test/Pods-teamwork-tech-test.debug.xcconfig"; sourceTree = "<group>"; };
 		DF0272811F3119D500337C08 /* teamwork-tech-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "teamwork-tech-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF0272841F3119D600337C08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DF0272861F3119D600337C08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DF0272861F3119D600337C08 /* ProjectSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSummaryViewController.swift; sourceTree = "<group>"; };
 		DF0272891F3119D600337C08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF02728B1F3119D600337C08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF02728E1F3119D600337C08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,12 +61,15 @@
 		DF0272B11F320E9200337C08 /* FLAnimatedImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FLAnimatedImage.framework; path = "Pods/../build/Debug-iphoneos/FLAnimatedImage/FLAnimatedImage.framework"; sourceTree = "<group>"; };
 		DF0272B31F320E9500337C08 /* PINCache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINCache.framework; path = "Pods/../build/Debug-iphoneos/PINCache/PINCache.framework"; sourceTree = "<group>"; };
 		DF0272B51F320E9A00337C08 /* PINRemoteImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINRemoteImage.framework; path = "Pods/../build/Debug-iphoneos/PINRemoteImage/PINRemoteImage.framework"; sourceTree = "<group>"; };
-		DF0272B71F3212A300337C08 /* ProjectDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDataSource.swift; sourceTree = "<group>"; };
+		DF0272B71F3212A300337C08 /* ProjectSummaryDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectSummaryDataSource.swift; sourceTree = "<group>"; };
 		DF0272BF1F32159400337C08 /* ProjectSummaryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectSummaryViewCell.swift; sourceTree = "<group>"; };
 		DF0272C81F323CED00337C08 /* ProjectSummaryViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectSummaryViewCell.xib; sourceTree = "<group>"; };
 		DF6112D51F332CCE00BB0621 /* ProjectManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectManager.swift; sourceTree = "<group>"; };
 		DF6112D81F33397900BB0621 /* ProjectDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailsViewController.swift; sourceTree = "<group>"; };
 		DF6112DA1F333FCD00BB0621 /* ProjectDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProjectDetails.storyboard; sourceTree = "<group>"; };
+		DF6112DC1F33590A00BB0621 /* ProjectDetailsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailsDataSource.swift; sourceTree = "<group>"; };
+		DF6112DF1F33690800BB0621 /* Date+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
+		DF6112E31F336A1700BB0621 /* LoadingSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingSpinner.swift; sourceTree = "<group>"; };
 		FB1386AA3B924A1FED6C8255 /* Pods-teamwork-tech-testTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teamwork-tech-testTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-teamwork-tech-testTests/Pods-teamwork-tech-testTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,9 +78,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF0272B61F320E9A00337C08 /* PINRemoteImage.framework in Frameworks */,
-				DF0272B41F320E9500337C08 /* PINCache.framework in Frameworks */,
-				DF0272B21F320E9200337C08 /* FLAnimatedImage.framework in Frameworks */,
 				DF0272B01F320E8C00337C08 /* Decodable.framework in Frameworks */,
 				FB1B314A24E4D77D8D0A819A /* Pods_teamwork_tech_test.framework in Frameworks */,
 			);
@@ -143,10 +143,11 @@
 			children = (
 				DF0272841F3119D600337C08 /* AppDelegate.swift */,
 				DF0272881F3119D600337C08 /* Main.storyboard */,
-				DF0272A61F31DA4B00337C08 /* Project Details */,
 				DF6112D71F33394100BB0621 /* Project Summaries */,
+				DF0272A61F31DA4B00337C08 /* Project Details */,
 				DF6112D41F332CB500BB0621 /* Manager */,
 				DF0272A41F31DA3100337C08 /* Model */,
+				DF6112DE1F3368ED00BB0621 /* Utitlities */,
 				DF02728B1F3119D600337C08 /* Assets.xcassets */,
 				DF02728D1F3119D600337C08 /* LaunchScreen.storyboard */,
 				DF0272901F3119D600337C08 /* Info.plist */,
@@ -168,7 +169,8 @@
 			children = (
 				DF0272AB1F32081C00337C08 /* Project.swift */,
 				DF0272AD1F320E5200337C08 /* Project+Decodable.swift */,
-				DF0272B71F3212A300337C08 /* ProjectDataSource.swift */,
+				DF0272B71F3212A300337C08 /* ProjectSummaryDataSource.swift */,
+				DF6112DC1F33590A00BB0621 /* ProjectDetailsDataSource.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -193,11 +195,20 @@
 		DF6112D71F33394100BB0621 /* Project Summaries */ = {
 			isa = PBXGroup;
 			children = (
-				DF0272861F3119D600337C08 /* ViewController.swift */,
+				DF0272861F3119D600337C08 /* ProjectSummaryViewController.swift */,
 				DF0272BF1F32159400337C08 /* ProjectSummaryViewCell.swift */,
 				DF0272C81F323CED00337C08 /* ProjectSummaryViewCell.xib */,
 			);
 			name = "Project Summaries";
+			sourceTree = "<group>";
+		};
+		DF6112DE1F3368ED00BB0621 /* Utitlities */ = {
+			isa = PBXGroup;
+			children = (
+				DF6112E31F336A1700BB0621 /* LoadingSpinner.swift */,
+				DF6112DF1F33690800BB0621 /* Date+String.swift */,
+			);
+			name = Utitlities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,13 +415,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF0272871F3119D600337C08 /* ViewController.swift in Sources */,
+				DF0272871F3119D600337C08 /* ProjectSummaryViewController.swift in Sources */,
 				DF6112D61F332CCE00BB0621 /* ProjectManager.swift in Sources */,
 				DF0272851F3119D600337C08 /* AppDelegate.swift in Sources */,
-				DF0272B81F3212A400337C08 /* ProjectDataSource.swift in Sources */,
+				DF0272B81F3212A400337C08 /* ProjectSummaryDataSource.swift in Sources */,
+				DF6112DD1F33590A00BB0621 /* ProjectDetailsDataSource.swift in Sources */,
 				DF0272AC1F32081C00337C08 /* Project.swift in Sources */,
+				DF6112E41F336A1700BB0621 /* LoadingSpinner.swift in Sources */,
 				DF6112D91F33397900BB0621 /* ProjectDetailsViewController.swift in Sources */,
 				DF0272C01F32159400337C08 /* ProjectSummaryViewCell.swift in Sources */,
+				DF6112E01F33690800BB0621 /* Date+String.swift in Sources */,
 				DF0272AE1F320E5200337C08 /* Project+Decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -564,6 +578,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "denis.quaid.teamwork-tech-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -583,6 +598,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "denis.quaid.teamwork-tech-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

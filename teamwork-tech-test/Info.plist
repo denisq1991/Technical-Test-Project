@@ -41,5 +41,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>token</key>
+	<string>twp_TEbBXGCnvl2HfvXWfkLUlzx92e3T</string>
+	<key>host</key>
+	<string>https://yat.teamwork.com/</string>
 </dict>
 </plist>

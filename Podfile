@@ -3,8 +3,7 @@
 
 target 'teamwork-tech-test' do
   use_frameworks!
-
-  pod 'PINRemoteImage', '~> 2.1'
+  
   pod 'Decodable', '~> 0.5'
   pod 'Alamofire', '~> 4.5'
   
