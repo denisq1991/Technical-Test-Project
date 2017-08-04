@@ -11,7 +11,7 @@ import UIKit
 final class ProjectSummaryViewController: UIViewController {
     
     @IBOutlet weak var projectsTableView: UITableView!
-    var projectSummaries: [ProjectSummary] = []
+    fileprivate var projectSummaries: [ProjectSummary] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

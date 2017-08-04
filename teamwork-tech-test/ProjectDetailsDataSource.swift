@@ -19,15 +19,16 @@ typealias FetchDetailsCompletionBlock = (_ result: FetchDetailsResult) -> ()
 class ProjectDetailsDataSource {
     
     func fetchProjectDetails(withId id: String, complete: @escaping FetchDetailsCompletionBlock) ->  () {
-        guard let host = Bundle.main.object(forInfoDictionaryKey: "host") as? String else {
-            print("Missing key in plist")
-            return
+        guard let host = Bundle.main.object(forInfoDictionaryKey: "host") as? String,
+            let token = Bundle.main.object(forInfoDictionaryKey: "token") as? String else {
+                print("Missing key in plist")
+                return
         }
         let requestUrl = "\(host)projects/\(id).json"
         
         // go to the projects url
         Alamofire.request(requestUrl)
-            .authenticate(user: "twp_TEbBXGCnvl2HfvXWfkLUlzx92e3T", password: "x")
+            .authenticate(user: token, password: "x")
             .responseJSON { response in
                 switch response.result {
                 case .success:

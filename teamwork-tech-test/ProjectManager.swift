@@ -11,7 +11,7 @@ import Foundation
 final class sharedObjects {
     private init() { }
     static let shared = sharedObjects()
-    static var projectManager = ProjectManager()
+    static let projectManager = ProjectManager()
 }
 
 final class ProjectManager {

@@ -73,10 +73,13 @@ final class ProjectDetailsViewController: UIViewController {
                     }
                     self.logoImageView.image = UIImage(data: imageData)
                     self.spinner?.hide()
-            } catch {
-                print(error)
+                } catch {
+                    print(error)
+                }
+            } else {
+                self.logoImageView.backgroundColor = UIColor.lightGray
+                self.spinner?.hide()
             }
         }
     }
-}
 }
