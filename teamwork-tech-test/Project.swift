@@ -26,9 +26,9 @@ struct ProjectDetail: Project {
     var id: String
     var name: String
     var description: String
-    var status: String
-    var subStatus: String
-    var defaultPrivacy: String
+    var status: String // In a larger project, this would be an enum
+    var subStatus: String // In a larger project, this would be an enum
+    var defaultPrivacy: String // In a larger project, this would be an enum
     var createdOn: String
     var startDate: String
     var endDate: String
